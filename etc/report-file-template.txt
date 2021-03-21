@@ -1,0 +1,7 @@
+Most recent change: 2019-03-15 08:28:05
+Application version: 18.3 (38cc4f)
+Schema version: 46
+Seconds elapsed: 14
+Total records read: 5085
+Records per second: 363.214285714286
+

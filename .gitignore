@@ -1,0 +1,3 @@
+*.csv
+*csv.gz
+data.csv.gz-report.txt

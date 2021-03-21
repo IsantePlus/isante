@@ -1,0 +1,5393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>migrate-obs-numeric</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/05/06 12:15:15.209</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/05/06 12:15:15.209</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>Openmrs HTY</name>
+    <server>${ISANTE-PLUS-DB-HOST}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${ISANTE-PLUS-DB-NAME}</database>
+    <port>${ISANTE-PLUS-DB-PORT}</port>
+    <username>${ISANTE-PLUS-DB-USER}</username>
+    <password>${ISANTE-PLUS-DB-PASSWORD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.zeroDateTimeBehavior</code>
+        <attribute>convertToNull</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${ISANTE-PLUS-DB-PORT}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Columns</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database join Coded</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Person Identifier</from>
+      <to>Fetch iSante Location</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join rows (cartesian product)</from>
+      <to>Fetch Last ETL Excution Date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Set field value numeric</from>
+      <to>Fetch Person Identifier</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>concepts</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Last ETL Excution Date</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Database join Coded</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Database join Non-Coded</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Set field value numeric</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database join Non-Coded</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows Use date</from>
+      <to>Set field value date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove new line from Address</from>
+      <to>Save on CSV</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Load iSante ID Identifier Type</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Load iSanteLocation Location Attribute</from>
+      <to>Join rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch iSante Location</from>
+      <to>Fetch Person Id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Person Id</from>
+      <to>Filter rows Use date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Set field value date</from>
+      <to>Select values format</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows Use date</from>
+      <to>Select values format</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>Fetch Person Identifier</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values format</from>
+      <to>Select date format</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select date format</from>
+      <to>Remove new line from Address</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Columns</name>
+    <type>DataGrid</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>table_name</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>person_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>concept_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>encounter_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>order_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>obs_datetime_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>location_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>obs_group_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>accession_number_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_group_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_boolean_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_coded_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_drug_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_datetime_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_numeric_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_modifier_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>value_text_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>date_started_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>date_stopped_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>comments_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>creator_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>date_created_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>voided_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>voided_by_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>date_voided_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>void_reason_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>default_one</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>default_na</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>default_zero</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>obs</item>
+        <item>person_id</item>
+        <item>concept_id</item>
+        <item>encounter_id</item>
+        <item>order_id</item>
+        <item>obs_datetime</item>
+        <item>location_id</item>
+        <item>obs_group_id</item>
+        <item>accession_number</item>
+        <item>value_group_id</item>
+        <item>value_boolean</item>
+        <item>value_coded</item>
+        <item>value_drug</item>
+        <item>value_datetime</item>
+        <item>value_numeric</item>
+        <item>value_modifier</item>
+        <item>value_text</item>
+        <item>date_started</item>
+        <item>date_stopped</item>
+        <item>comments</item>
+        <item>creator</item>
+        <item>date_created</item>
+        <item>voided</item>
+        <item>voided_by</item>
+        <item>date_voided</item>
+        <item>void_reason</item>
+        <item>1</item>
+        <item />
+        <item>0</item>
+      </line>
+    </data>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>32</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database join Coded</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select obs.person_id, obs.obs_datetime, obs.encounter_id, encounter.location_id, encounter.encounter_datetime, obs.date_created, obs.voided,
+obs.date_voided, obs.void_reason, obs.comments, obs.value_text, obs.value_numeric, obs.value_datetime  from obs
+join encounter on encounter.encounter_id = obs.encounter_id
+join isanteplus_form_history on isanteplus_form_history.encounter_id = obs.encounter_id
+join encounter_type on encounter_type.encounter_type_id = encounter.encounter_type
+where obs.concept_id = ?
+  and obs.value_coded = ?
+  and obs.voided = false
+  and encounter_type.uuid in ('12f4d7c3-e047-4455-a607-47a40fe32460', 'a5600919-4dde-4eb8-a45b-05c204af8284', '709610ff-5e39-4a47-9c27-a60e740b0944', 'fdb5b14f-555f-4282-b4c1-9286addf0aae', '5c312603-25c1-4dbe-be18-1a167eb85f97', '49592bec-dd22-4b6c-a97f-4dd2af6f2171','17536ba6-dd7c-4f58-8014-08c7cb798ac7', 'd95b3540-a39f-4d1e-a301-8ee0e03d5eab')
+  and (encounter.date_created >= ?
+   or encounter.date_changed >= ?
+or isanteplus_form_history.date_changed >= ?
+   or encounter.date_voided >= ?
+   or encounter.date_created >= ?
+   or encounter.date_changed >= ?
+   or encounter.date_voided >= ?
+   or obs.date_voided >= ?
+   or obs.date_created >= ?)
+</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>isante_plus_question</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>isante_plus_answer</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database join Non-Coded</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select obs.person_id, obs.obs_datetime, obs.encounter_id, encounter.location_id, encounter.encounter_datetime, obs.date_created, obs.voided,
+obs.date_voided, obs.void_reason, obs.comments, obs.value_text, obs.value_numeric, obs.value_datetime  from obs
+join encounter on encounter.encounter_id = obs.encounter_id
+join isanteplus_form_history on isanteplus_form_history.encounter_id = obs.encounter_id
+join encounter_type on encounter_type.encounter_type_id = encounter.encounter_type
+where obs.concept_id = ?
+  and obs.voided = false
+  and encounter_type.uuid in ('12f4d7c3-e047-4455-a607-47a40fe32460', 'a5600919-4dde-4eb8-a45b-05c204af8284', '709610ff-5e39-4a47-9c27-a60e740b0944', 'fdb5b14f-555f-4282-b4c1-9286addf0aae', 'a5600919-4dde-4eb8-a45b-05c204af8284', '709610ff-5e39-4a47-9c27-a60e740b0944', 'fdb5b14f-555f-4282-b4c1-9286addf0aae', '5c312603-25c1-4dbe-be18-1a167eb85f97', '49592bec-dd22-4b6c-a97f-4dd2af6f2171','17536ba6-dd7c-4f58-8014-08c7cb798ac7', 'd95b3540-a39f-4d1e-a301-8ee0e03d5eab')
+  and (encounter.date_created >= ?
+   or encounter.date_changed >= ?
+ or isanteplus_form_history.date_changed >= ?
+   or encounter.date_voided >= ?
+   or encounter.date_created >= ?
+   or encounter.date_changed >= ?
+   or encounter.date_voided >= ?
+   or obs.date_voided >= ?
+   or obs.date_created >= ?)
+</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>isante_plus_question</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+      <field>
+        <name>last_execution</name>
+        <type>Date</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fetch Last ETL Excution Date</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>1</rowlimit>
+    <sql>select etl_execution.date last_execution from etl_execution
+where etl_execution.completed = true
+order by date desc</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fetch Person Id</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>1</rowlimit>
+    <sql>select substring(?, length(?) + 1) parsed_person_id</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>patient_identifier</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>isante_location_id</name>
+        <type>Number</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fetch Person Identifier</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>1</rowlimit>
+    <sql>select patient_identifier.identifier patient_identifier from patient_identifier
+where patient_identifier.identifier_type = ?
+  and patient_identifier.voided = false
+  and patient_identifier.patient_id = ?
+</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>isante_id_identifier_type_id</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>person_id</name>
+        <type>Number</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fetch iSante Location</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>1</rowlimit>
+    <sql>select location_attribute.value_reference isante_location_id from location_attribute 
+where location_attribute.attribute_type_id = ?
+  and location_attribute.location_id = ?
+</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>isante_location_location_attribute_id</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>location_id</name>
+        <type>Number</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <send_true_to>Database join Coded</send_true_to>
+    <send_false_to>Database join Non-Coded</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>isante_answer</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue />
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>N</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask />
+        </value>
+      </condition>
+    </compare>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows Use date</name>
+    <type>FilterRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <send_true_to>Set field value date</send_true_to>
+    <send_false_to>Select values format</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>use_date</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue />
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>N</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask />
+        </value>
+      </condition>
+    </compare>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Join rows (cartesian product)</name>
+    <type>JoinRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main />
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue />
+        <function>=</function>
+        <rightvalue />
+      </condition>
+    </compare>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Load iSante ID Identifier Type</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <sql>select patient_identifier_type.patient_identifier_type_id isante_id_identifier_type_id from patient_identifier_type where uuid = '0e0c7cc2-3491-4675-b705-746e372ff346'</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>32</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Load iSanteLocation Location Attribute</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <sql>select location_attribute_type_id isante_location_location_attribute_id from location_attribute_type where name = 'iSanteSiteCode'</sql>
+    <limit>1</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Remove new line from Address</name>
+    <type>StringOperations</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>value_text</in_stream_name>
+        <out_stream_name>value_text_sanitazed</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Save on CSV</name>
+    <type>TextFileOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>Y</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>N</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine />
+    <fileNameInField>N</fileNameInField>
+    <fileNameField />
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${user.home}/isante/data</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format />
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery />
+    </file>
+    <fields>
+      <field>
+        <name>table_name</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>person_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>parsed_person_id</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>concept_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>isante_question</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>encounter_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>encounter_id</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>obs_datetime_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>obs_datetime</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>location_id_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>isante_location_id</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_datetime_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_datetime</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_numeric_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_numeric</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_text_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value_text_sanitazed</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>comments_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>comments</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>creator_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>default_one</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>date_created_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>date_created</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>voided_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>voided</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>date_voided_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>date_voided</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>void_reason_c</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>void_reason</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select date format</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>value_datetime</name>
+        <rename>value_datetime</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>value_numeric</name>
+        <rename>value_numeric</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>value_numeric</name>
+        <rename>value_numeric</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values format</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>voided</name>
+        <rename>voided</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>obs_datetime</name>
+        <rename>obs_datetime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>date_voided</name>
+        <rename>date_voided</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>date_created</name>
+        <rename>date_created</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>value_datetime</name>
+        <rename>value_datetime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Set field value date</name>
+    <type>SetValueField</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>value_datetime</name>
+        <replaceby>obs_datetime</replaceby>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Set field value numeric</name>
+    <type>SetValueField</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>value_numeric</name>
+        <replaceby>isante_answer</replaceby>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>concepts</name>
+    <type>DataGrid</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>concept_name</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>isante_plus_question</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>isante_plus_answer</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>isante_question</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>isante_answer</name>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>use_date</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>Tête: Normal</item>
+        <item>1122</item>
+        <item>1115</item>
+        <item>7086</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Tête: Anormal</item>
+        <item>1122</item>
+        <item>1116</item>
+        <item>7086</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Tête: Non Effectué</item>
+        <item>1122</item>
+        <item>1118</item>
+        <item>7086</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Uterus: Normal</item>
+        <item>163742</item>
+        <item>1115</item>
+        <item>7904</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Uterus: Anormal</item>
+        <item>163742</item>
+        <item>1116</item>
+        <item>7904</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Uterus: Non Effectué</item>
+        <item>163742</item>
+        <item>1118</item>
+        <item>7904</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux Externes: Normal</item>
+        <item>163743</item>
+        <item>1115</item>
+        <item>7091</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux Externes: Anormal</item>
+        <item>163743</item>
+        <item>1116</item>
+        <item>7091</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux Externes: Non Effectué</item>
+        <item>163743</item>
+        <item>1118</item>
+        <item>7091</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Vagin: Normal</item>
+        <item>163744</item>
+        <item>1115</item>
+        <item>7092</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Vagin: Anormal</item>
+        <item>163744</item>
+        <item>1116</item>
+        <item>7092</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Vagin: Non Effectué</item>
+        <item>163744</item>
+        <item>1118</item>
+        <item>7092</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Annexes: Normal</item>
+        <item>163745</item>
+        <item>1115</item>
+        <item>7094</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Annexes: Anormal</item>
+        <item>163745</item>
+        <item>1116</item>
+        <item>7094</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Annexes: Non Effectué</item>
+        <item>163745</item>
+        <item>1118</item>
+        <item>7094</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Reflexes Ostéo-Tendineux: Normal</item>
+        <item>160623</item>
+        <item>1115</item>
+        <item>7097</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Reflexes Ostéo-Tendineux: Anormal</item>
+        <item>160623</item>
+        <item>1116</item>
+        <item>7097</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Reflexes Ostéo-Tendineux: Non Effectué</item>
+        <item>160623</item>
+        <item>1118</item>
+        <item>7097</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Nez: Normal</item>
+        <item>163336</item>
+        <item>1115</item>
+        <item>70223</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Nez: Anormal</item>
+        <item>163336</item>
+        <item>1116</item>
+        <item>70223</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Nez: Non Effectué</item>
+        <item>163336</item>
+        <item>1118</item>
+        <item>70223</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Bouche/Orale: Normal</item>
+        <item>1122</item>
+        <item>1115</item>
+        <item>70224</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Bouche/Orale: Anormal</item>
+        <item>1122</item>
+        <item>1116</item>
+        <item>70224</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Bouche/Orale: Non Effectué</item>
+        <item>1122</item>
+        <item>1118</item>
+        <item>70224</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Oreilles: Normal</item>
+        <item>163337</item>
+        <item>1115</item>
+        <item>70225</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Oreilles: Anormal</item>
+        <item>163337</item>
+        <item>1116</item>
+        <item>70225</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Oreilles: Non Effectué</item>
+        <item>163337</item>
+        <item>1118</item>
+        <item>70225</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Col: Normal</item>
+        <item>160704</item>
+        <item>1115</item>
+        <item>7093</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Col: Anormal</item>
+        <item>160704</item>
+        <item>1116</item>
+        <item>7093</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Col: Non Effectué</item>
+        <item>160704</item>
+        <item>1118</item>
+        <item>7093</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Neck + Thyroid: Normal</item>
+        <item>163388</item>
+        <item>1115</item>
+        <item>7087</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Neck + Thyroid: Abnormal</item>
+        <item>163388</item>
+        <item>1116</item>
+        <item>7087</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Neck + Thyroid: Non Effectué</item>
+        <item>163388</item>
+        <item>1118</item>
+        <item>7087</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Coeur: Normal</item>
+        <item>1124</item>
+        <item>1115</item>
+        <item>7088</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Coeur: Anormal</item>
+        <item>1124</item>
+        <item>1116</item>
+        <item>7088</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Coeur: Non Effectué</item>
+        <item>1124</item>
+        <item>1118</item>
+        <item>7088</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Seins: Normal</item>
+        <item>159780</item>
+        <item>1115</item>
+        <item>7089</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Seins: Anormal</item>
+        <item>159780</item>
+        <item>1116</item>
+        <item>7089</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Seins: Non Effectué</item>
+        <item>159780</item>
+        <item>1118</item>
+        <item>7089</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux: Normal</item>
+        <item>163743</item>
+        <item>1115</item>
+        <item>70228</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux: Anormal</item>
+        <item>163743</item>
+        <item>1116</item>
+        <item>70228</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Organes génitaux: Non Effectué</item>
+        <item>163743</item>
+        <item>1118</item>
+        <item>70228</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Toucher Rectal: Normal</item>
+        <item>163746</item>
+        <item>1115</item>
+        <item>7095</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Toucher Rectal: Anormal</item>
+        <item>163746</item>
+        <item>1116</item>
+        <item>7095</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Toucher Rectal: Non Effectué</item>
+        <item>163746</item>
+        <item>1118</item>
+        <item>7095</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Membres: Normal</item>
+        <item>1127</item>
+        <item>1115</item>
+        <item>7096</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Membres: Anormal</item>
+        <item>1127</item>
+        <item>1116</item>
+        <item>7096</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Membres: Non Effectué</item>
+        <item>1127</item>
+        <item>1118</item>
+        <item>7096</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Examen Neurologique: Normal</item>
+        <item>1129</item>
+        <item>1115</item>
+        <item>70905</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Examen Neurologique: Anormal</item>
+        <item>1129</item>
+        <item>1116</item>
+        <item>70905</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Examen Neurologique: Non Effectué</item>
+        <item>1129</item>
+        <item>1118</item>
+        <item>70905</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Cervicale: Normal</item>
+        <item>145802</item>
+        <item>163747</item>
+        <item>71233</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Cervicale: Anormal</item>
+        <item>145802</item>
+        <item>163748</item>
+        <item>71233</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Cervicale: Non Effectué</item>
+        <item>145802</item>
+        <item>1118</item>
+        <item>71233</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Supraclaviculaire: Normal</item>
+        <item>159003</item>
+        <item>163747</item>
+        <item>71234</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Supraclaviculaire: Anormal</item>
+        <item>159003</item>
+        <item>163748</item>
+        <item>71234</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Supraclaviculaire: Non Effectué</item>
+        <item>159003</item>
+        <item>1118</item>
+        <item>71234</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Axillaire: Normal</item>
+        <item>148058</item>
+        <item>163747</item>
+        <item>71235</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Axillaire: Anormal</item>
+        <item>148058</item>
+        <item>163748</item>
+        <item>71235</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Axillaire: Non Effectué</item>
+        <item>148058</item>
+        <item>1118</item>
+        <item>71235</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Inguinale: Normal</item>
+        <item>163950</item>
+        <item>163747</item>
+        <item>71236</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Inguinale: Anormal</item>
+        <item>163950</item>
+        <item>163748</item>
+        <item>71236</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Inguinale: Non Effectué</item>
+        <item>163950</item>
+        <item>1118</item>
+        <item>71236</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Description des conclusions anormales</item>
+        <item>1391</item>
+        <item />
+        <item>70906</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Remarkes</item>
+        <item>1391</item>
+        <item />
+        <item>8084</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Other Diagnosis comments</item>
+        <item>159395</item>
+        <item />
+        <item>7271</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Nouveau diagnostic: Nouveau diagnostic</item>
+        <item>1659</item>
+        <item>160567</item>
+        <item>71224</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Nouveau diagnostic: Suivi</item>
+        <item>1659</item>
+        <item>1662</item>
+        <item>71224</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Date d’enregistrement</item>
+        <item>161552</item>
+        <item />
+        <item>71173</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Date début traitement</item>
+        <item>1113</item>
+        <item />
+        <item>71193</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Cas Contact (TPM+): Oui</item>
+        <item>124068</item>
+        <item>1065</item>
+        <item>71201</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Cas Contact (TPM+): Non</item>
+        <item>124068</item>
+        <item>1066</item>
+        <item>71201</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Nombre de contacts</item>
+        <item>163754</item>
+        <item />
+        <item>71202</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>No de référence du cas index</item>
+        <item>163755</item>
+        <item />
+        <item>71203</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Accompagnateur: oui</item>
+        <item>160112</item>
+        <item>1065</item>
+        <item>71204</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Accompagnateur: Non</item>
+        <item>160112</item>
+        <item>1066</item>
+        <item>71204</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Statut VIH: Non testé</item>
+        <item>1169</item>
+        <item>1402</item>
+        <item>71205</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Statut VIH: Négatif</item>
+        <item>1169</item>
+        <item>664</item>
+        <item>71205</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Statut VIH: Positif</item>
+        <item>1169</item>
+        <item>703</item>
+        <item>71205</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Si positif, enrôlé(e) en soins: Oui</item>
+        <item>159811</item>
+        <item>1065</item>
+        <item>71212</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Si positif, enrôlé(e) en soins: Non</item>
+        <item>159811</item>
+        <item>1066</item>
+        <item>71212</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>TB CD4: Date</item>
+        <item>5497</item>
+        <item />
+        <item>71226</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>ARV: Oui</item>
+        <item>160117</item>
+        <item>160119</item>
+        <item>71209</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>ARV: Non</item>
+        <item>160117</item>
+        <item>1461</item>
+        <item>71209</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>ARV: médicaments</item>
+        <item>163322</item>
+        <item />
+        <item>71210</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Supplémentation en vitamine B</item>
+        <item>1193</item>
+        <item>86341</item>
+        <item>71411</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Date d’arret du traitement</item>
+        <item>159431</item>
+        <item />
+        <item>71215</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Resultat TB: Guéri</item>
+        <item>159786</item>
+        <item>159791</item>
+        <item>71216</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Resultat TB: Traitement Terminé</item>
+        <item>159786</item>
+        <item>160035</item>
+        <item>71216</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Resultat TB: Abandon</item>
+        <item>159786</item>
+        <item>159874</item>
+        <item>71216</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>Resultat TB: Transféré</item>
+        <item>159786</item>
+        <item>160031</item>
+        <item>71216</item>
+        <item>16</item>
+        <item />
+      </line>
+      <line>
+        <item>Resultat TB: Décédé</item>
+        <item>159786</item>
+        <item>160034</item>
+        <item>71216</item>
+        <item>32</item>
+        <item />
+      </line>
+      <line>
+        <item>Autre Plan</item>
+        <item>161011</item>
+        <item />
+        <item>70427</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Électrophorèse de l’hémoglobine</item>
+        <item>161421</item>
+        <item />
+        <item>71120</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Résultats</item>
+        <item>160716</item>
+        <item />
+        <item>70432</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Autres</item>
+        <item>162148</item>
+        <item />
+        <item>70041</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item> Antécédents personnelle: Aucune</item>
+        <item>163730</item>
+        <item>163608</item>
+        <item>71097</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item> Antécédents personnelle: Inconnu</item>
+        <item>163730</item>
+        <item>163609</item>
+        <item>71097</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Médicaments actuels</item>
+        <item>160221</item>
+        <item />
+        <item>69999</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Remarque</item>
+        <item>161011</item>
+        <item />
+        <item>70745</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Poids de naissance</item>
+        <item>5916</item>
+        <item />
+        <item>70767</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Hospitalisation Antérieure: Oui</item>
+        <item>163403</item>
+        <item>1065</item>
+        <item>71006</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Hospitalisation Antérieure: Non</item>
+        <item>163403</item>
+        <item>1066</item>
+        <item>71006</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item> Hospitalisation: Si oui, cause</item>
+        <item>162156</item>
+        <item />
+        <item>70910</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Allaitement maternel exclusif : Oui</item>
+        <item>5526</item>
+        <item>1065</item>
+        <item>70662</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Allaitement maternel exclusif : Non</item>
+        <item>5526</item>
+        <item>1066</item>
+        <item>70662</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Allaitement maternel exclusif : Si oui, durée en mois</item>
+        <item>163548</item>
+        <item />
+        <item>70659</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Préparation pour nourrissons (LM): Oui</item>
+        <item>5254</item>
+        <item>1065</item>
+        <item>70663</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Préparation pour nourrissons (LM): Non</item>
+        <item>5254</item>
+        <item>1066</item>
+        <item>70663</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Préparation pour nourrissons (LM): Si oui, précisez le lait </item>
+        <item>163553</item>
+        <item />
+        <item>70652</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Alimentation mixte: Oui</item>
+        <item>6046</item>
+        <item>1065</item>
+        <item>70664</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Alimentation mixte: Non</item>
+        <item>6046</item>
+        <item>1066</item>
+        <item>70664</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Diversification alimentaire: Oui</item>
+        <item>163551</item>
+        <item>1065</item>
+        <item>70665</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Diversification alimentaire: Non</item>
+        <item>163551</item>
+        <item>1066</item>
+        <item>70665</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Si oui, âge en mois</item>
+        <item>163548</item>
+        <item />
+        <item>70651</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Anus: Absent</item>
+        <item>163582</item>
+        <item>1115</item>
+        <item>71417</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Anus: Present</item>
+        <item>163582</item>
+        <item>1116</item>
+        <item>71417</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Anus: Non Effectué</item>
+        <item>163582</item>
+        <item>1118</item>
+        <item>71417</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Motricité globale: Développement normal pour l'âge</item>
+        <item>163578</item>
+        <item>160275</item>
+        <item>70746</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Motricité globale: Retard du développement</item>
+        <item>163578</item>
+        <item>160276</item>
+        <item>70746</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Motricité fine :Développement normal pour l'âge</item>
+        <item>163579</item>
+        <item>160275</item>
+        <item>70747</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Motricité fine: Retard du développement</item>
+        <item>163579</item>
+        <item>160276</item>
+        <item>70747</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Langage/Compréhension: Développement normal pour l'âge</item>
+        <item>163787</item>
+        <item>160275</item>
+        <item>70748</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Langage/Compréhension: Motricité globale: Retard du développement</item>
+        <item>163787</item>
+        <item>160276</item>
+        <item>70748</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Contact Social: Développement normal pour l'âge</item>
+        <item>163580</item>
+        <item>160275</item>
+        <item>70749</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Contact Social: Motricité globale: Retard du développement</item>
+        <item>163580</item>
+        <item>160276</item>
+        <item>70749</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Support Nutritionel: Oui</item>
+        <item>161542</item>
+        <item>1065</item>
+        <item>71054</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Support Nutritionel: Non</item>
+        <item>161542</item>
+        <item>1066</item>
+        <item>71054</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Current WHO stage I</item>
+        <item>5356</item>
+        <item>1204</item>
+        <item>70753</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Current WHO stage II</item>
+        <item>5356</item>
+        <item>1205</item>
+        <item>70754</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Current WHO stage III</item>
+        <item>5356</item>
+        <item>1206</item>
+        <item>70755</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Current WHO stage IV</item>
+        <item>5356</item>
+        <item>1207</item>
+        <item>70756</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Current WHO stage unknown</item>
+        <item>5356</item>
+        <item>1067</item>
+        <item>70757</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxie Cotrimoxazole</item>
+        <item>1109</item>
+        <item>105281</item>
+        <item>71406</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxie Azythromycine </item>
+        <item>1110</item>
+        <item>71780</item>
+        <item>71407</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxie Fluconazole</item>
+        <item>1109</item>
+        <item>76488</item>
+        <item>71408</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxie INH pri</item>
+        <item>1110</item>
+        <item>1679</item>
+        <item>71409</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxie INH sec</item>
+        <item>1110</item>
+        <item>1679</item>
+        <item>71410</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Age of menarche</item>
+        <item>160598</item>
+        <item />
+        <item>8067</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Age of first intercourse</item>
+        <item>163587</item>
+        <item />
+        <item>8068</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Cumulative number of sexual partners</item>
+        <item>5570</item>
+        <item />
+        <item>70464</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Length Rules</item>
+        <item>163732</item>
+        <item />
+        <item>7866</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Duration of Cycle</item>
+        <item>160597</item>
+        <item />
+        <item>7867</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Dysmenorrhea</item>
+        <item>1628</item>
+        <item>158306</item>
+        <item>7868</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dysmenorrhea Primary</item>
+        <item>1628</item>
+        <item>129135</item>
+        <item>7869</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dysmenorrhea Secundary</item>
+        <item>1628</item>
+        <item>152336</item>
+        <item>7869</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Infertilité </item>
+        <item>1628</item>
+        <item>158308</item>
+        <item>71352</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Live children</item>
+        <item>1825</item>
+        <item />
+        <item>7870</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Multiple pregnancy</item>
+        <item>1628</item>
+        <item>115491</item>
+        <item>70032</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Severe preeclampsia</item>
+        <item>1628</item>
+        <item>113006</item>
+        <item>70032</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Hemorrhage of pregnancy / postpartum</item>
+        <item>1628</item>
+        <item>117612</item>
+        <item>70032</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy 1 date</item>
+        <item>160602</item>
+        <item />
+        <item>71353</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>ATCD of Cesarean</item>
+        <item>1651</item>
+        <item>1171</item>
+        <item>70480</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Latest Cervical Cancer Screening</item>
+        <item>163267</item>
+        <item />
+        <item>70485</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Latest Cervical Cancer Screening Result - Normal</item>
+        <item>885</item>
+        <item>1115</item>
+        <item>70029</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Latest Cervical Cancer Screening Result - Abnormal</item>
+        <item>885</item>
+        <item>1116</item>
+        <item>70029</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Latest Cervical Cancer Screening Result - Not done</item>
+        <item>885</item>
+        <item>1118</item>
+        <item>70029</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Monthly Breast palpation -Yes</item>
+        <item>163590</item>
+        <item>1065</item>
+        <item>70487</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Monthly Breast palpation -No</item>
+        <item>163590</item>
+        <item>1066</item>
+        <item>70487</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Mammogram (age> 35 years) Yes</item>
+        <item>163591</item>
+        <item>1226</item>
+        <item>7873</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Mammogram (age> 35 years) No</item>
+        <item>163591</item>
+        <item>1118</item>
+        <item>7873</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Mammogram (age> 35 years) Normal</item>
+        <item>163591</item>
+        <item>1115</item>
+        <item>70163</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Mammogram (age> 35 years) Abnormal</item>
+        <item>163591</item>
+        <item>1116</item>
+        <item>70163</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Menopause</item>
+        <item>1628</item>
+        <item>134346</item>
+        <item>7871</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Menopause age</item>
+        <item>160599</item>
+        <item />
+        <item>7872</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Food supplementation, Yes</item>
+        <item>161542</item>
+        <item>1065</item>
+        <item>71214</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Food supplementation, No</item>
+        <item>161542</item>
+        <item>1066</item>
+        <item>71214</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Supplémentation en vitamine B</item>
+        <item>1193</item>
+        <item>86341</item>
+        <item>71411</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Gueri</item>
+        <item>159786</item>
+        <item>159791</item>
+        <item>71216</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Traitement Terminé</item>
+        <item>159786</item>
+        <item>160035</item>
+        <item>71216</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Abandon</item>
+        <item>159786</item>
+        <item>159874</item>
+        <item>71216</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Transfere</item>
+        <item>159786</item>
+        <item>160031</item>
+        <item>71216</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>Decede</item>
+        <item>159786</item>
+        <item>160034</item>
+        <item>71216</item>
+        <item>16</item>
+        <item />
+      </line>
+      <line>
+        <item>Cryotherapie </item>
+        <item>1651</item>
+        <item>162812</item>
+        <item>162812</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>LEEP</item>
+        <item>1651</item>
+        <item>162810</item>
+        <item>162810</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Thermocoagulation </item>
+        <item>1651</item>
+        <item>163408</item>
+        <item>163408</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Conisation</item>
+        <item>1651</item>
+        <item>162811</item>
+        <item>162811</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Hystérectomie</item>
+        <item>1651</item>
+        <item>159837</item>
+        <item>159837</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Aucune</item>
+        <item>160079</item>
+        <item>1107</item>
+        <item>71376</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Ancienne césarisée</item>
+        <item>160079</item>
+        <item>145777</item>
+        <item>71377</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Anemie</item>
+        <item>160079</item>
+        <item>148834</item>
+        <item>71378</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Diabete</item>
+        <item>160079</item>
+        <item>119476</item>
+        <item>71379</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Œdème</item>
+        <item>160079</item>
+        <item>460</item>
+        <item>71380</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Grande parité</item>
+        <item>160079</item>
+        <item>1053</item>
+        <item>71381</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>&lt;18</item>
+        <item>160079</item>
+        <item>163119</item>
+        <item>71382</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>&gt;35</item>
+        <item>160079</item>
+        <item>163120</item>
+        <item>71383</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Grossesse multiple</item>
+        <item>160079</item>
+        <item>115491</item>
+        <item>71384</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Hémorragie antépartum</item>
+        <item>160079</item>
+        <item>228</item>
+        <item>71385</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Hypertension</item>
+        <item>160079</item>
+        <item>113858</item>
+        <item>71386</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Poids stationnaire</item>
+        <item>160079</item>
+        <item>136784</item>
+        <item>71387</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>VIH</item>
+        <item>160079</item>
+        <item>163210</item>
+        <item>71388</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Taille&lt;150cm</item>
+        <item>160079</item>
+        <item>162589</item>
+        <item>71389</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Counseling prétest</item>
+        <item>163760</item>
+        <item>1065</item>
+        <item>71390</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Counseling prétest date</item>
+        <item>163760</item>
+        <item>1065</item>
+        <item>71391</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>Counseling posttest</item>
+        <item>159382</item>
+        <item>1065</item>
+        <item>71392</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Counseling posttest date</item>
+        <item>159382</item>
+        <item>1065</item>
+        <item>71393</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>Suivi Prénatal</item>
+        <item>1592</item>
+        <item>1622</item>
+        <item>70729</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dispensation ARV</item>
+        <item>1592</item>
+        <item>5576</item>
+        <item>70730</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Education Individualle</item>
+        <item>1592</item>
+        <item>163106</item>
+        <item>70731</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Education des Accompagnateurs</item>
+        <item>1592</item>
+        <item>163763</item>
+        <item>70732</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Visite Domiciliaire</item>
+        <item>1592</item>
+        <item>162186</item>
+        <item>70733</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Club des Mères / Groupe de Support</item>
+        <item>1592</item>
+        <item>5486</item>
+        <item>71068</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Conseils sur l’allaitement maternel</item>
+        <item>1592</item>
+        <item>1910</item>
+        <item>71398</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Lieu - Domicile</item>
+        <item>159758</item>
+        <item>1536</item>
+        <item>7955</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Lieu - Hôpital</item>
+        <item>159758</item>
+        <item>1589</item>
+        <item>7955</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Si domicile et femme VIH positif - Yes</item>
+        <item>163764</item>
+        <item>1065</item>
+        <item>7958</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Si domicile et femme VIH positif - No</item>
+        <item>163764</item>
+        <item>1066</item>
+        <item>7958</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Si domicile : Planification pour la présence d’une matrone - Yes</item>
+        <item>161007</item>
+        <item>1065</item>
+        <item>7960</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Si domicile : Planification pour la présence d’une matrone - No</item>
+        <item>161007</item>
+        <item>1066</item>
+        <item>7960</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Planification pour un Accompagnateur - Yes</item>
+        <item>160112</item>
+        <item>1065</item>
+        <item>7307</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Planification pour un Accompagnateur - No</item>
+        <item>160112</item>
+        <item>1066</item>
+        <item>7307</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Planification pour transition dans une Maison de Naissance - Yes</item>
+        <item>163765</item>
+        <item>1065</item>
+        <item>71070</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Planification pour transition dans une Maison de Naissance - No</item>
+        <item>163765</item>
+        <item>1066</item>
+        <item>71070</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Inscrite dans un Club des Mères - Yes</item>
+        <item>163766</item>
+        <item>1065</item>
+        <item>7967</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Inscrite dans un Club des Mères - No</item>
+        <item>163766</item>
+        <item>1066</item>
+        <item>7967</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Monthly Breast palpation: Yes</item>
+        <item>163590</item>
+        <item>1065</item>
+        <item>70487</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Monthly Breast palpation: No</item>
+        <item>163590</item>
+        <item>1066</item>
+        <item>70487</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy Followed: Yes</item>
+        <item>1622</item>
+        <item>1</item>
+        <item>70523</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy Followed: No</item>
+        <item>1622</item>
+        <item>2</item>
+        <item>70523</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Wanted pregnancy: Yes</item>
+        <item>163085</item>
+        <item>122933</item>
+        <item>71275</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Wanted pregnancy: No</item>
+        <item>163085</item>
+        <item>123572</item>
+        <item>71275</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred:  Yes</item>
+        <item>1648</item>
+        <item>1</item>
+        <item>71276</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred: No</item>
+        <item>1648</item>
+        <item>2</item>
+        <item>71276</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred, if yes: Matrone</item>
+        <item>160482</item>
+        <item>71277</item>
+        <item>1578</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred, if yes: Autre</item>
+        <item>160482</item>
+        <item>71277</item>
+        <item>5622</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxis against Malaria: Yes</item>
+        <item>159610</item>
+        <item>1</item>
+        <item>71278</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prophylaxis against Malaria: No</item>
+        <item>159610</item>
+        <item>2</item>
+        <item>71278</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy: Single</item>
+        <item>159949</item>
+        <item>159913</item>
+        <item>70531</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy: Twins</item>
+        <item>159949</item>
+        <item>159914</item>
+        <item>70531</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Pregnancy: Multiple</item>
+        <item>159949</item>
+        <item>115491</item>
+        <item>70531</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Presentation: Cephalic</item>
+        <item>160090</item>
+        <item>160091</item>
+        <item>7805</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Presentation: Breech</item>
+        <item>160090</item>
+        <item>139814</item>
+        <item>7805</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Presentation: Transverse</item>
+        <item>160090</item>
+        <item>112259</item>
+        <item>7805</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Fever: Yes</item>
+        <item>140238</item>
+        <item>1065</item>
+        <item>7807</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Fever: No</item>
+        <item>140238</item>
+        <item>1066</item>
+        <item>7807</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Rupture of membranes :  Spontaneous</item>
+        <item>140238</item>
+        <item>126069</item>
+        <item>7808</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Amniotic fluid :  Clear</item>
+        <item>163446</item>
+        <item>1115</item>
+        <item>7810</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Amniotic fluid :  Tinted</item>
+        <item>163446</item>
+        <item>155311</item>
+        <item>7810</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Amniotic fluid :  Meconium</item>
+        <item>163446</item>
+        <item>134488</item>
+        <item>7810</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Dystocia :  Mechanical</item>
+        <item>163449</item>
+        <item>163447</item>
+        <item>71279</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dystocia :  Dynamic</item>
+        <item>163449</item>
+        <item>163448</item>
+        <item>71279</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Dystocia :  Other</item>
+        <item>163449</item>
+        <item>5622</item>
+        <item>71279</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Prolapsed cord :  Yes</item>
+        <item>128420</item>
+        <item>1065</item>
+        <item>71280</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Prolapsed cord :  No</item>
+        <item>128420</item>
+        <item>1066</item>
+        <item>71280</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Vaginal bleeding :  Yes</item>
+        <item>147232</item>
+        <item>1065</item>
+        <item>7828</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Vaginal bleeding :  No</item>
+        <item>147232</item>
+        <item>1066</item>
+        <item>7828</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Abruptio placentae</item>
+        <item>147232</item>
+        <item>130108</item>
+        <item>70534</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Placenta previa</item>
+        <item>147232</item>
+        <item>138902</item>
+        <item>70534</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>uterine rupture</item>
+        <item>147232</item>
+        <item>127259</item>
+        <item>70534</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Vaginal bleeding other</item>
+        <item>147232</item>
+        <item>5622</item>
+        <item>70534</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>Labor transfusion: Yes</item>
+        <item>1063</item>
+        <item>1</item>
+        <item>7829</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Labor transfusion: No</item>
+        <item>1063</item>
+        <item>2</item>
+        <item>7829</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Labor HTA</item>
+        <item>1284</item>
+        <item>113858</item>
+        <item>70525</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Severe preeclampsia</item>
+        <item>1284</item>
+        <item>113006</item>
+        <item>70529</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Eclampsia</item>
+        <item>1284</item>
+        <item>118744</item>
+        <item>71281</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>If HIV positive : TAR  Yes</item>
+        <item>160117</item>
+        <item>160119</item>
+        <item>71129</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>If HIV positive : TAR  No</item>
+        <item>160117</item>
+        <item>1461</item>
+        <item>71129</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery Location: Current health facility</item>
+        <item>1572</item>
+        <item>163266</item>
+        <item>71282</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery Location: Delivery at home</item>
+        <item>1572</item>
+        <item>1501</item>
+        <item>71282</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery Location: Delivery at health facility</item>
+        <item>1572</item>
+        <item>1502</item>
+        <item>71282</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery Location: Other</item>
+        <item>1572</item>
+        <item>5622</item>
+        <item>71282</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>If home birth assisted by Matron :  Yes</item>
+        <item>1573</item>
+        <item>1574</item>
+        <item>7823</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Vaginal :  Yes</item>
+        <item>1170</item>
+        <item>1065</item>
+        <item>71137</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Vaginal :  No</item>
+        <item>1170</item>
+        <item>1066</item>
+        <item>71137</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Forceps :  Yes</item>
+        <item>159901</item>
+        <item>1065</item>
+        <item>70524</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Forceps :  No</item>
+        <item>159901</item>
+        <item>1066</item>
+        <item>70524</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Vacuum :  Yes</item>
+        <item>159902</item>
+        <item>1065</item>
+        <item>7822</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Vacuum :  No</item>
+        <item>159902</item>
+        <item>1066</item>
+        <item>7822</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Late cord ligation :  Yes</item>
+        <item>163450</item>
+        <item>122933</item>
+        <item>71283</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Late cord ligation :  No</item>
+        <item>163450</item>
+        <item>123572</item>
+        <item>71283</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery :  Natural</item>
+        <item>163453</item>
+        <item>163451</item>
+        <item>7824</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Delivery :  Artificial</item>
+        <item>163453</item>
+        <item>163452</item>
+        <item>7824</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Placenta :  Complete / Total</item>
+        <item>163454</item>
+        <item>163455</item>
+        <item>7827</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Placenta :  Incomplete</item>
+        <item>163454</item>
+        <item>163456</item>
+        <item>7827</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Perineal laceration :  Yes </item>
+        <item>160084</item>
+        <item>112253</item>
+        <item>7825</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Perineal laceration :  No</item>
+        <item>160084</item>
+        <item>1115</item>
+        <item>7825</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>If yes, repaired :  Yes</item>
+        <item>163457</item>
+        <item>1065</item>
+        <item>7826</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>If yes, repaired :  No</item>
+        <item>163457</item>
+        <item>1066</item>
+        <item>7826</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Cesarian</item>
+        <item>5630</item>
+        <item>1171</item>
+        <item>7820</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Cesarean section hysterectomy +</item>
+        <item>5630</item>
+        <item>161848</item>
+        <item>7820</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Counseling on Nutrition of the Newborn :  Yes</item>
+        <item>161070</item>
+        <item>1065</item>
+        <item>7835</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Counseling on Nutrition of the Newborn :  No</item>
+        <item>161070</item>
+        <item>1066</item>
+        <item>7835</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>ARV prophylaxis Newborn :  Yes</item>
+        <item>5665</item>
+        <item>1065</item>
+        <item>70528</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>ARV prophylaxis Newborn :  No</item>
+        <item>5665</item>
+        <item>1066</item>
+        <item>70528</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred in puerperium</item>
+        <item>161630</item>
+        <item>1623</item>
+        <item>70521</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Referred to in pathology</item>
+        <item>161630</item>
+        <item>161625</item>
+        <item>70521</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Exéatée </item>
+        <item>160433</item>
+        <item>1692</item>
+        <item>70521</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Evolution mother: HTA</item>
+        <item>1887</item>
+        <item>117399</item>
+        <item>71297</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Hemorrhage</item>
+        <item>1887</item>
+        <item>230</item>
+        <item>71297</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Infection</item>
+        <item>1887</item>
+        <item>121262</item>
+        <item>71297</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Post op</item>
+        <item>1887</item>
+        <item>159007</item>
+        <item>71297</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>Cardiomyopathie</item>
+        <item>1887</item>
+        <item>5016</item>
+        <item>71297</item>
+        <item>16</item>
+        <item />
+      </line>
+      <line>
+        <item>Exéatée</item>
+        <item>160433</item>
+        <item>1692</item>
+        <item>70521</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Died</item>
+        <item>160433</item>
+        <item>159</item>
+        <item>70521</item>
+        <item>8</item>
+        <item />
+      </line>
+      <line>
+        <item>Choosing a contraceptive method: Yes</item>
+        <item>374</item>
+        <item>162332</item>
+        <item>71299</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Choosing a contraceptive method: No</item>
+        <item>374</item>
+        <item>1175</item>
+        <item>71299</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Patient view for Consultation :Gynecological</item>
+        <item>160288</item>
+        <item>160456</item>
+        <item>7860</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Patient view for Consultation: Prenatale</item>
+        <item>160288</item>
+        <item>1622</item>
+        <item>70018</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Patient view for Consultation: Postnatale</item>
+        <item>160288</item>
+        <item>1623</item>
+        <item>71240</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Patient view for Consultation: Family Planning</item>
+        <item>160288</item>
+        <item>5483</item>
+        <item>71368</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dépistage CA du Col</item>
+        <item>1651</item>
+        <item>151185</item>
+        <item>70073</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Dépistage CA de la Prostate (Homme > 40ans)</item>
+        <item>1651</item>
+        <item>163464</item>
+        <item>70074</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Si positif, enrôlée en soins: date</item>
+        <item>5497</item>
+        <item />
+        <item>71226</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>Primaire</item>
+        <item>1712</item>
+        <item>1713</item>
+        <item>71241</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Secondaire</item>
+        <item>1712</item>
+        <item>1714</item>
+        <item>71242</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Universitaire</item>
+        <item>1712</item>
+        <item>159785</item>
+        <item>71243</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Alphabétisée</item>
+        <item>159400</item>
+        <item>1065</item>
+        <item>71244</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Non Alphabétisée</item>
+        <item>159400</item>
+        <item>1066</item>
+        <item>71245</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>A-</item>
+        <item>300</item>
+        <item>690</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>A+</item>
+        <item>300</item>
+        <item>692</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>B-</item>
+        <item>300</item>
+        <item>694</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>B+</item>
+        <item>300</item>
+        <item>696</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>O+</item>
+        <item>300</item>
+        <item>699</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>0-</item>
+        <item>300</item>
+        <item>701</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>AB+</item>
+        <item>300</item>
+        <item>1230</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>AB-</item>
+        <item>300</item>
+        <item>1231</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Inconnu </item>
+        <item>300</item>
+        <item>1107</item>
+        <item>71139</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Family history: Aucune</item>
+        <item>163607</item>
+        <item>163729</item>
+        <item>71096</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Family history: Inconnu</item>
+        <item>163607</item>
+        <item>163728</item>
+        <item>71096</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>ANTECEDENTS PERSONNELS/HABITUDES: Aucune</item>
+        <item>163730</item>
+        <item>163608</item>
+        <item>71097</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>ANTECEDENTS PERSONNELS/HABITUDES: Inconnu</item>
+        <item>163730</item>
+        <item>163609</item>
+        <item>71097</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Statut VIH: Non testé</item>
+        <item>1169</item>
+        <item>1067</item>
+        <item>71205</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>CD4 cellules</item>
+        <item>159375</item>
+        <item />
+        <item>71208</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>TB CD4</item>
+        <item>5497</item>
+        <item />
+        <item>70758</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Grossesse multiple</item>
+        <item>1628</item>
+        <item>115491</item>
+        <item>70032</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Pré éclampsie sévère</item>
+        <item>1628</item>
+        <item>113006</item>
+        <item>70032</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Hémorragie de la grossesse/post-partum</item>
+        <item>1628</item>
+        <item>117612</item>
+        <item>70032</item>
+        <item>4</item>
+        <item />
+      </line>
+      <line>
+        <item>Labor Weight </item>
+        <item>5089</item>
+        <item />
+        <item>7842</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Référence: Marote</item>
+        <item>160482</item>
+        <item>1578</item>
+        <item>71277</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Référence: Autre</item>
+        <item>160482</item>
+        <item>5622</item>
+        <item>71277</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>ACCOUCHEMENT: Césarienne: Indication</item>
+        <item>5630</item>
+        <item>1171</item>
+        <item>7820</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Référée en suites de couche</item>
+        <item>161630</item>
+        <item>1623</item>
+        <item>70521</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Référée en pathologie pour</item>
+        <item>161630</item>
+        <item>161625</item>
+        <item>70521</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Œdème: Oui</item>
+        <item>460</item>
+        <item>1065</item>
+        <item>70825</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Œdème: Non</item>
+        <item>460</item>
+        <item>1066</item>
+        <item>70825</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Position: D</item>
+        <item>163749</item>
+        <item>5141</item>
+        <item>70826</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Position: G</item>
+        <item>163749</item>
+        <item>5139</item>
+        <item>70826</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Contraction utérine: Oui</item>
+        <item>163750</item>
+        <item>163748</item>
+        <item>70827</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Contraction utérine: Non</item>
+        <item>163750</item>
+        <item>163747</item>
+        <item>70827</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Intervention date</item>
+        <item>160715</item>
+        <item />
+        <item>160715</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Return visit date obgyn</item>
+        <item>5096</item>
+        <item />
+        <item>71067</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Date Probable d’accouchement</item>
+        <item>5596</item>
+        <item />
+        <item>71069</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Gestational age</item>
+        <item>1409</item>
+        <item />
+        <item>7803</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Uterine size</item>
+        <item>1439</item>
+        <item />
+        <item>7804</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Fetal heart rate</item>
+        <item>1440</item>
+        <item />
+        <item>7806</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Rupture of membranes: date</item>
+        <item>160710</item>
+        <item />
+        <item>7809</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Estimated blood loss</item>
+        <item>161928</item>
+        <item />
+        <item>70518</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Child birth: Date and Time</item>
+        <item>5599</item>
+        <item />
+        <item>7819</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Allaitement maternel exclusif: duration in months</item>
+        <item>163548</item>
+        <item />
+        <item>70659</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>TB Registration date</item>
+        <item>161552</item>
+        <item />
+        <item>71173</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>TB: Statut VIH date</item>
+        <item>160554</item>
+        <item />
+        <item>71206</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Autre établissement / clinique</item>
+        <item>161562</item>
+        <item />
+        <item>70648</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>TUBERCULOSE: CD4 date</item>
+        <item>5497</item>
+        <item />
+        <item>71226</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>TUBERCULOSE: Statut VIH: Date</item>
+        <item>160554</item>
+        <item />
+        <item>71206</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>ARV: Si oui, médicaments</item>
+        <item>163322</item>
+        <item />
+        <item>71210</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>DDR</item>
+        <item>1427</item>
+        <item />
+        <item>70465</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>DPA</item>
+        <item>5596</item>
+        <item />
+        <item>70466</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>AV</item>
+        <item>1825</item>
+        <item />
+        <item>7870</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>DÉBUT DU TRAVAIL: Date et Heure</item>
+        <item>163444</item>
+        <item />
+        <item>7802</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>DÉBUT DU TRAVAIL: Age gestationnel</item>
+        <item>1409</item>
+        <item />
+        <item>7803</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>DÉBUT DU TRAVAIL: Date et Heure</item>
+        <item>160710</item>
+        <item />
+        <item>7809</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>ACCOUCHEMENT: Date et Heure</item>
+        <item>5599</item>
+        <item />
+        <item>7819</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>CONDUITE A TENIR: Planification familiale: Date début</item>
+        <item>163757</item>
+        <item />
+        <item>70584</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>CONDUITE A TENIR: Planification familiale: Date d’arrêt</item>
+        <item>163758</item>
+        <item />
+        <item>70585</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>CONDUITE A TENIR: Méthode PF administrée: Ligature des trompes</item>
+        <item>374</item>
+        <item>1472</item>
+        <item>7879</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>CONDUITE A TENIR: Méthode PF administrée: Sterilet</item>
+        <item>374</item>
+        <item>5275</item>
+        <item>7877</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>CONDUITE A TENIR: Méthode PF administrée: Pilule: Collier, jour fixe: date</item>
+        <item>374</item>
+        <item>163759</item>
+        <item>71375</item>
+        <item />
+        <item>Y</item>
+      </line>
+      <line>
+        <item>Patiente sous ARV: Oui</item>
+        <item>161557</item>
+        <item>1065</item>
+        <item>71394</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Patiente sous ARV: Non</item>
+        <item>161557</item>
+        <item>1066</item>
+        <item>71394</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Référence partenaire: Positif</item>
+        <item>1436</item>
+        <item>703</item>
+        <item>71395</item>
+        <item>1</item>
+        <item />
+      </line>
+      <line>
+        <item>Référence partenaire: Négatif</item>
+        <item>1436</item>
+        <item>664</item>
+        <item>71395</item>
+        <item>2</item>
+        <item />
+      </line>
+      <line>
+        <item>Référence partenaire: Indéterminé</item>
+        <item>1436</item>
+        <item>1067</item>
+        <item>71395</item>
+        <item>3</item>
+        <item />
+      </line>
+      <line>
+        <item>Motif de dépistage</item>
+        <item>163761</item>
+        <item />
+        <item>71396</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Date de prochaine visite</item>
+        <item>5096</item>
+        <item />
+        <item>71067</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item> Date Probable d’accouchement</item>
+        <item>5596</item>
+        <item />
+        <item>71069</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>Vitals: BP</item>
+        <item>1343</item>
+        <item />
+        <item>70823</item>
+        <item />
+        <item />
+      </line>
+      <line>
+        <item>ARV: Date de début</item>
+        <item>159599</item>
+        <item />
+        <item>71211</item>
+        <item />
+        <item />
+      </line>
+    </data>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>32</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>

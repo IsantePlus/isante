@@ -1,0 +1,31 @@
+Most recent change: 2019-03-15 08:28:05
+Application version: 18.3 (38cc4f)
+Schema version: 46
+Seconds elapsed: 14
+Total records read: 5085
+Records per second: 363.214285714286
+
+adherenceCounseling      126957
+allergies                    36
+allowedDisclosures         1597
+arvAndPregnancy            3675
+arvEnrollment             43894
+conditions                13163
+discEnrollment             2065
+drugs                    126552
+encounter                329840
+followupTreatment         35578
+homeCareVisits            27438
+labs                      80919
+medicalEligARVs           43894
+obs                      114202
+otherDrugs                  375
+otherPrescriptions           38
+patient                   48186
+pedHistory                 5293
+pedLabs                    1070
+prescriptionOtherFields   58102
+prescriptions            332000
+riskAssessments           36396
+tbStatus                  81392
+vitals                   108736
