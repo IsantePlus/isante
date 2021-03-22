@@ -565,8 +565,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1488</xloc>
-      <yloc>624</yloc>
+      <xloc>1632</xloc>
+      <yloc>640</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1562,11 +1562,11 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>upload-file.sh</name>
+      <name>uploadAllfiles.sh</name>
       <description/>
       <type>SHELL</type>
       <attributes/>
-      <filename>C:\Users\Edrisse\Documents\isante\etc\upload-file.sh</filename>
+      <filename>/home/isanteplus/isante/etc/uploadAllfiles.sh</filename>
       <work_directory/>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1576,7 +1576,7 @@
       <logext>txt</logext>
       <add_date>N</add_date>
       <add_time>N</add_time>
-      <insertScript>Y</insertScript>
+      <insertScript>N</insertScript>
       <script>${ISANTE-PLUS-CURL-COMMAND} -k --user ${ISANTE-PLUS-CONSOLIDATED-SERVER-USER}:${ISANTE-PLUS-CONSOLIDATED-SERVER-PASSWORD} --url ${ISANTE-PLUS-CONSOLIDATED-SERVER-URL} --form "startTime=2019-07-15 13:49:48" --form "stopTime=2019-07-15 13:49:48" --form "serverName=d95s13109" --form "databaseName=itech" --form "targetName=papConsolidated" --form "dataFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz" --form "reportFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz-report.txt" --form "errorFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz-error.txt"</script>
       <loglevel>Debug</loglevel>
       <parallel>N</parallel>
@@ -2498,6 +2498,31 @@
       <yloc>752</yloc>
       <attributes_kjc/>
     </entry>
+    <entry>
+      <name>move_file.sh</name>
+      <description/>
+      <type>SHELL</type>
+      <attributes/>
+      <filename>/home/isanteplus/isante/etc/move_file.sh</filename>
+      <work_directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile>C:\Users\Edrisse\Desktop\upload</logfile>
+      <set_append_logfile>N</set_append_logfile>
+      <logext>txt</logext>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <insertScript>N</insertScript>
+      <script>${ISANTE-PLUS-CURL-COMMAND} -k --user ${ISANTE-PLUS-CONSOLIDATED-SERVER-USER}:${ISANTE-PLUS-CONSOLIDATED-SERVER-PASSWORD} --url ${ISANTE-PLUS-CONSOLIDATED-SERVER-URL} --form "startTime=2019-07-15 13:49:48" --form "stopTime=2019-07-15 13:49:48" --form "serverName=d95s13109" --form "databaseName=itech" --form "targetName=papConsolidated" --form "dataFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz" --form "reportFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz-report.txt" --form "errorFileName=@${user.home}/isante/${FILE_NAME_PREFIX}.csv.gz-error.txt"</script>
+      <loglevel>Debug</loglevel>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1632</xloc>
+      <yloc>512</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
     <hop>
@@ -2736,16 +2761,7 @@
     </hop>
     <hop>
       <from>Copy Error Template</from>
-      <to>upload-file.sh</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>upload-file.sh</from>
-      <to>Success</to>
+      <to>uploadAllfiles.sh</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -3034,6 +3050,24 @@
     <hop>
       <from>migrate-obs-coded</from>
       <to>migrate-homeVisit</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>uploadAllfiles.sh</from>
+      <to>move_file.sh</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>move_file.sh</from>
+      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
