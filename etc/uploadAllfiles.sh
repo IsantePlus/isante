@@ -3,7 +3,7 @@ cd ${HOME}/isante/
 gzfiles=`ls *.gz`
 ISANTE_PLUS_CONSOLIDATED_SERVER_USER='itech'
 ISANTE_PLUS_CONSOLIDATED_SERVER_PASSWORD='jaif5Ahg5mei'
-ISANTE_PLUS_CONSOLIDATED_SERVER_URL='https://192.168.1.54/receiver/receive-file.pl'
+ISANTE_PLUS_CONSOLIDATED_SERVER_URL='https://200.2.133.226/receiver/receive-file.pl'
 
 for gzfile in $gzfiles
 do
