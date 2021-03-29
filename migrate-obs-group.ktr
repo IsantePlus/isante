@@ -1449,7 +1449,7 @@ where location_attribute.attribute_type_id = ?
     </remotesteps>
     <GUI>
       <xloc>864</xloc>
-      <yloc>96</yloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
