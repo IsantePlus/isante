@@ -576,11 +576,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Map Marital Status</from>
-      <to>Save on CSV</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Fetch Emergency Relation</from>
       <to>Fetch Emergency Relation Description</to>
       <enabled>Y</enabled>
@@ -723,6 +718,16 @@
     <hop>
       <from>Replace in string</from>
       <to>Map Sex</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map Marital Status</from>
+      <to>Remove new line </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove new line </from>
+      <to>Save on CSV</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -2911,6 +2916,85 @@ where patient_identifier.identifier_type = ?
     </GUI>
   </step>
   <step>
+    <name>Remove new line </name>
+    <type>StringOperations</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>emergency_address</in_stream_name>
+        <out_stream_name>emergency_address_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>emergency_name</in_stream_name>
+        <out_stream_name>emergency_name_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>emergency_relation_desc</in_stream_name>
+        <out_stream_name>emergency_relation_desc_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>occupation_desc</in_stream_name>
+        <out_stream_name>occupation_desc_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>1072</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Remove new line from Address</name>
     <type>StringOperations</type>
     <description />
@@ -2947,6 +3031,57 @@ where patient_identifier.identifier_type = ?
     <GUI>
       <xloc>384</xloc>
       <yloc>912</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>birthday_day</in_stream_name>
+        <out_stream_name>birthday_day_dd</out_stream_name>
+        <use_regex>yes</use_regex>
+        <replace_string>\b([0-9])\b</replace_string>
+        <replace_by_string>0$1</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string />
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>birthday_month</in_stream_name>
+        <out_stream_name>birthday_month_mm</out_stream_name>
+        <use_regex>yes</use_regex>
+        <replace_string>\b([0-9])\b</replace_string>
+        <replace_by_string>0$1</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string />
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3645,7 +3780,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>occupation_desc</name>
+        <name>occupation_desc_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3669,7 +3804,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>emergency_name</name>
+        <name>emergency_name_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3693,7 +3828,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>emergency_relation_desc</name>
+        <name>emergency_relation_desc_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3765,7 +3900,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>emergency_address</name>
+        <name>emergency_address_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3882,59 +4017,8 @@ where patient_identifier.identifier_type = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>1104</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string</name>
-    <type>ReplaceString</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>birthday_day</in_stream_name>
-        <out_stream_name>birthday_day_dd</out_stream_name>
-        <use_regex>yes</use_regex>
-        <replace_string>\b([0-9])\b</replace_string>
-        <replace_by_string>0$1</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string />
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>birthday_month</in_stream_name>
-        <out_stream_name>birthday_month_mm</out_stream_name>
-        <use_regex>yes</use_regex>
-        <replace_string>\b([0-9])\b</replace_string>
-        <replace_by_string>0$1</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string />
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes />
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>784</yloc>
+      <xloc>816</xloc>
+      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

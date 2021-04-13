@@ -14103,7 +14103,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>other_vacination</name>
+        <name>other_vacination_sz</name>
         <type>String</type>
         <format />
         <currency />
@@ -14199,7 +14199,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>family_planning_other</name>
+        <name>family_planning_other_sz</name>
         <type>String</type>
         <format />
         <currency />
@@ -14607,7 +14607,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>noneTreatments</name>
+        <name>noneTreatments_sz</name>
         <type>String</type>
         <format />
         <currency />
@@ -15351,7 +15351,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>other_feeding_type</name>
+        <name>other_feeding_type_sz</name>
         <type>String</type>
         <format />
         <currency />
@@ -16167,7 +16167,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>firstCareOtherFacText</name>
+        <name>firstCareOtherFacText_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -16911,7 +16911,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>ped_food_allerg_specify</name>
+        <name>ped_food_allerg_specify_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -16983,7 +16983,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>ped_other_allerg_specify</name>
+        <name>ped_other_allerg_specify_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -17554,6 +17554,84 @@ where location_attribute.attribute_type_id = ?
       <field>
         <in_stream_name>drug_comment</in_stream_name>
         <out_stream_name>drug_comment_sanitized</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>family_planning_other</in_stream_name>
+        <out_stream_name>family_planning_other_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>noneTreatments</in_stream_name>
+        <out_stream_name>noneTreatments_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>other_feeding_type</in_stream_name>
+        <out_stream_name>other_feeding_type_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>ped_other_allerg_specify</in_stream_name>
+        <out_stream_name>ped_other_allerg_specify_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>ped_food_allerg_specify</in_stream_name>
+        <out_stream_name>ped_food_allerg_specify_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>firstCareOtherFacText</in_stream_name>
+        <out_stream_name>firstCareOtherFacText_sz</out_stream_name>
         <trim_type>none</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
