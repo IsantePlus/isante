@@ -2979,6 +2979,110 @@ where patient_identifier.identifier_type = ?
         <digits>none</digits>
         <remove_special_characters>crlf</remove_special_characters>
       </field>
+      <field>
+        <in_stream_name>address2</in_stream_name>
+        <out_stream_name>address2_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>address3</in_stream_name>
+        <out_stream_name>address3_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>city_village</in_stream_name>
+        <out_stream_name>city_village_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>comune</in_stream_name>
+        <out_stream_name>comune_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>phone</in_stream_name>
+        <out_stream_name>phone_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>emergency_comune</in_stream_name>
+        <out_stream_name>emergency_comune_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>emergency_section_comunale</in_stream_name>
+        <out_stream_name>emergency_section_comunale_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>section_comunale</in_stream_name>
+        <out_stream_name>section_comunale_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
     </fields>
     <attributes />
     <cluster_schema />
@@ -3588,7 +3692,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>city_village</name>
+        <name>city_village_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3612,7 +3716,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>address3</name>
+        <name>address3_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3636,7 +3740,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>address2</name>
+        <name>address2_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3660,7 +3764,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>phone</name>
+        <name>phone_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3684,7 +3788,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>comune</name>
+        <name>comune_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3708,7 +3812,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>section_comunale</name>
+        <name>section_comunale_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3852,7 +3956,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>emergency_comune</name>
+        <name>emergency_comune_sz</name>
         <type>None</type>
         <format />
         <currency />
@@ -3876,7 +3980,7 @@ where patient_identifier.identifier_type = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>emergency_section_comunale</name>
+        <name>emergency_section_comunale_sz</name>
         <type>None</type>
         <format />
         <currency />

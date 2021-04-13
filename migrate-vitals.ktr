@@ -14607,7 +14607,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>noneTreatments_sz</name>
+        <name>noneTreatments</name>
         <type>String</type>
         <format />
         <currency />
@@ -17578,19 +17578,6 @@ where location_attribute.attribute_type_id = ?
         <remove_special_characters>crlf</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>noneTreatments</in_stream_name>
-        <out_stream_name>noneTreatments_sz</out_stream_name>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char />
-        <pad_len />
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>crlf</remove_special_characters>
-      </field>
-      <field>
         <in_stream_name>other_feeding_type</in_stream_name>
         <out_stream_name>other_feeding_type_sz</out_stream_name>
         <trim_type>none</trim_type>
@@ -17632,6 +17619,19 @@ where location_attribute.attribute_type_id = ?
       <field>
         <in_stream_name>firstCareOtherFacText</in_stream_name>
         <out_stream_name>firstCareOtherFacText_sz</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>other_vacination</in_stream_name>
+        <out_stream_name>other_vacination_sz</out_stream_name>
         <trim_type>none</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
