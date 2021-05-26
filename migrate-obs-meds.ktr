@@ -532,11 +532,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values format</from>
-      <to>Save on CSV</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>concepts</from>
       <to>Join rows (cartesian product)</to>
       <enabled>Y</enabled>
@@ -549,6 +544,16 @@
     <hop>
       <from>Fetch group of concept</from>
       <to>Fetch Person Identifier</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values format</from>
+      <to>String operations</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations</from>
+      <to>Save on CSV</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1910,6 +1915,59 @@ where location_attribute.attribute_type_id = ?
     <GUI>
       <xloc>48</xloc>
       <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>String operations</name>
+    <type>StringOperations</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>value_text</in_stream_name>
+        <out_stream_name>value_text</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>comments</in_stream_name>
+        <out_stream_name>comments</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

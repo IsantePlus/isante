@@ -597,21 +597,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Replace in string</from>
-      <to>Days and Months w/ 2 digits</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Fetch Alternative Dosage prescribed new concept</from>
-      <to>Fetch Duration prescribed</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Fetch Drug received</from>
-      <to>Fetch Dosage dispensed</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Fetch Alternative Dosage dispensed</from>
       <to>Fetch Duration dispensed</to>
       <enabled>Y</enabled>
@@ -662,13 +647,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Map Use alt dosage</from>
-      <to>Filter dosages</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter dosages</from>
-      <to>Fetch Alternative Dosage prescribed new concept</to>
+      <from>Fetch Alternative Dosage prescribed old concept</from>
+      <to>Fetch Duration prescribed</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -677,8 +657,38 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Fetch Alternative Dosage prescribed old concept</from>
+      <from>Filter dosages</from>
+      <to>Fetch Alternative Dosage prescribed new concept</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Alternative Dosage prescribed new concept</from>
       <to>Fetch Duration prescribed</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map Use alt dosage</from>
+      <to>Filter dosages</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Drug received</from>
+      <to>Fetch Alternative Dosage prescribed ped</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Fetch Alternative Dosage prescribed ped</from>
+      <to>Fetch Dosage dispensed</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace in string</from>
+      <to>String operations</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations</from>
+      <to>Days and Months w/ 2 digits</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1307,7 +1317,7 @@ where obs.concept_id = (select concept.concept_id from concept where concept.uui
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>384</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1352,8 +1362,53 @@ where obs.concept_id = (select concept.concept_id from concept where concept.uui
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>224</yloc>
+      <xloc>384</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fetch Alternative Dosage prescribed ped</name>
+    <type>DBJoin</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>Openmrs HTY</connection>
+    <rowlimit>1</rowlimit>
+    <sql>select obs.value_text alternative_dosage_prescribed_ped from obs
+where obs.concept_id = (select concept.concept_id from concept where concept.uuid = "ca8bc9c3-7f97-450a-8f33-e98f776b90e1")
+  and obs.obs_group_id = ?
+  and obs.voided = false
+  and obs.encounter_id = ?
+</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>N</replace_vars>
+    <parameter>
+      <field>
+        <name>drug_group_id_prescribed</name>
+        <type>Number</type>
+      </field>
+      <field>
+        <name>encounter_id</name>
+        <type>Number</type>
+      </field>
+    </parameter>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1425,7 +1480,7 @@ where obs.concept_id = 1444
     <replace_vars>N</replace_vars>
     <parameter>
       <field>
-        <name>drug_group_id_dispensed</name>
+        <name>drug_group_id_prescribed</name>
         <type>Number</type>
       </field>
       <field>
@@ -2151,7 +2206,7 @@ where location_attribute.attribute_type_id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>528</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3500,7 +3555,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>dosage_function_weight</name>
+        <name>alternative_dosage_prescribed_ped</name>
         <type>String</type>
         <format />
         <currency />
@@ -3578,7 +3633,7 @@ where location_attribute.attribute_type_id = ?
         <currency />
         <decimal />
         <group />
-        <nullif>0</nullif>
+        <nullif />
         <trim_type>none</trim_type>
         <length>-1</length>
         <precision>-1</precision>
@@ -3596,7 +3651,7 @@ where location_attribute.attribute_type_id = ?
         <precision>-1</precision>
       </field>
       <field>
-        <name>alternative_dosage_prescribed</name>
+        <name>dosage_function_weight</name>
         <type>String</type>
         <format />
         <currency />
@@ -3619,6 +3674,85 @@ where location_attribute.attribute_type_id = ?
     <GUI>
       <xloc>752</xloc>
       <yloc>688</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>String operations</name>
+    <type>StringOperations</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>alternative_dosage_dispensed</in_stream_name>
+        <out_stream_name>alternative_dosage_dispensed</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>alternative_dosage_prescribed</in_stream_name>
+        <out_stream_name>alternative_dosage_prescribed</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>alternative_dosage_prescribed_ped</in_stream_name>
+        <out_stream_name>alternative_dosage_prescribed_ped</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>dosage_function_weight</in_stream_name>
+        <out_stream_name>dosage_function_weight</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char />
+        <pad_len />
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>crlf</remove_special_characters>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
