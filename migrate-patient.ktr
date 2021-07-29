@@ -2203,7 +2203,7 @@ where patient_identifier.identifier_type = ?
     </partitioning>
     <connection>Openmrs HTY</connection>
     <rowlimit>1</rowlimit>
-    <sql>select trim(replace(REPLACE(person_name.given_name,CHAR(13),''),CHAR(10),'')) as person_name,
+    <sql>select trim(replace(REPLACE(person_name.given_name,CHAR(13),''),CHAR(10),'')) as given_name,
 trim(replace(REPLACE(person_name.family_name ,CHAR(13),''),CHAR(10),'')) as family_name
 from person_name
 where person_name.person_id = ?
