@@ -6100,8 +6100,8 @@ where obs.concept_id = 163309
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>1136</yloc>
+      <xloc>352</xloc>
+      <yloc>1152</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11843,8 +11843,8 @@ where location_attribute.attribute_type_id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>1136</yloc>
+      <xloc>240</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
